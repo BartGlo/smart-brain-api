@@ -16,10 +16,15 @@ app.use(express.json()) // for parsing application/json
 const db = knex({
   client: 'pg',
   connection: {
+<<<<<<< HEAD
     host: '127.0.0.1',
     user: 'mrg',
     password: '',
     database: 'smart-brain'
+=======
+    connectionString: process.env.DATABASE_URL,
+    ssl: true
+>>>>>>> 130fa93... fix
   }
 })
 
